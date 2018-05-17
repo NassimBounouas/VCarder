@@ -26,4 +26,5 @@ int main(int argc, char ** argv)
 	tom.name = malloc(sizeof(char));
 	strcpy(tom.name, "Tom");
 	display(&tom);
+	free(tom.name);
 }
