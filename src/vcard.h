@@ -5,7 +5,8 @@
 
 #define vCardVersion "3.0"
 #define headerSize 25
-#define footerSize 10
+#define footerSize 11
+#define namePropertySize 3
 
 
 struct VCard {
@@ -15,9 +16,8 @@ struct VCard {
     char * footer;
 };
 
-char * generateVCard(struct Person * person);
+struct VCard * generateVCard();
+void display(struct VCard * vcard);
+void freeVCard(struct VCard * vcard);
 
-char * generateHeader();
-
-char * generateFooter();
 #endif
