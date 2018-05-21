@@ -16,7 +16,7 @@ struct VCard {
     char * footer;
 };
 
-struct VCard * generateVCard();
+struct VCard * generateVCard(struct Person * person);
 void display(struct VCard * vcard);
 void freeVCard(struct VCard * vcard);
 

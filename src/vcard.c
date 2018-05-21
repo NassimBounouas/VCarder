@@ -41,13 +41,14 @@ char * addPerson(struct Person * person)
 
 }
 
-struct VCard * generateVCard()
+struct VCard * generateVCard(struct Person * person)
 {
 	struct VCard * vcard = malloc(sizeof(struct VCard));
 	vcard->filename = malloc(sizeof(char));
 	vcard->header = generateHeader();
 	//vcard-> person = malloc(sizeof(struct Person));
-	vcard->person = createPerson("Doe", "John");
+	//vcard->person = createPerson("Doe", "John");
+	vcard->person = person;
 	vcard->footer = generateFooter();
 	return vcard;
 }

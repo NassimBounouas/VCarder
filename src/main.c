@@ -2,7 +2,8 @@
 
 int main(int argc, char ** argv)
 {
-	struct VCard * vcard = generateVCard();
+	struct Person * john  = createPerson("Doe", "John");
+	struct VCard * vcard = generateVCard(john);
 	display(vcard);
 	freeVCard(vcard);
 }
